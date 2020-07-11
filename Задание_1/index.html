@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Тестовое задание</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css">
+
+    <style>
+        @keyframes showIn {
+            0% {
+                transform: translateY(-120px);
+            }
+            25% {
+                transform: translateY(0);
+            }
+            75% {
+                transform: translateY(0);
+            }
+            100% {
+                transform: translateY(120px);
+            }
+        }
+        
+        main {
+            box-shadow: 2px 4px 5px rgba(15, 15, 15, .2);
+        }
+        
+        .container {
+            box-sizing: border-box;
+            padding: 24px;
+            border: 1px solid #c2c2c2;
+            border-radius: 10px;
+        }
+        
+        .show {
+            color: dimgray;
+            text-decoration: none;
+        }
+        
+        #headline-text {
+            box-sizing: border-box;
+            overflow: hidden;
+        }
+        
+        .animated {
+            animation: showIn 2.5s ease-in-out forwards infinite;
+            /* var(--my-variable-name) */
+        }
+        
+        li {
+            margin: 12px 0;
+            color: darkgray;
+            text-decoration: line-through;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="stop-interval"></div>
+    <main>
+        <section>
+            <div class="container" style="border: none;">
+                <div class="row">
+                    <div id="headline-text" class="eight columns">
+                        <h1></h1>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <ul></ul>
+                </div>
+            </div>
+            <div class="container" style="margin-top: 24px; border: none;">
+                <form id="sub-btn" action="">
+                    <div class="row">
+                        <div class="twelve columns">
+                            <label for="getLi">Добавить пункт</label>
+                            <input class="u-full-width" id="getLi" type="text" />
+                        </div>
+                    </div>
+                    <div>
+                        <div class="twelve columns">
+                            <input class="button-primary u-pull-right" type="submit" value="Добавить к списку" />
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+    </main>
+    <script src="index.js"></script>
+</body>
+
+</html>
